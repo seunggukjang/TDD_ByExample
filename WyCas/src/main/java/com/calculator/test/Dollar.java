@@ -1,12 +1,12 @@
 package com.calculator.test;
 
-public class Dollar {
-
+public class Dollar extends Money {
 	public Dollar(int amount) {
 		this.amount = amount;
 	}
-	void times(int multiplier) {
-		amount *= multiplier;
+	public Money times(int multiplier) {
+		return new Dollar(amount * multiplier);
 	}
-	int amount = 0; // 10 = 5 * 2 중복!
+	
+	
 }
